@@ -1,5 +1,53 @@
 [
   {
+    "id": "vault-202610142134-1",
+    "date": "2026-10-14",
+    "title": "Niche Story-Grid System",
+    "category": "UI & Layout",
+    "trend_signal": "Niche brands demand unique digital presence beyond standard templates, struggling with generic layouts. This system leverages custom aspect ratios and fluid grids to craft distinct, narrative-driven layouts that captivate specific audiences and reinforce brand story.",
+    "typography_pairing": "DM Serif Display + Inter",
+    "color_palette": [
+      "#E8DBC5",
+      "#B38C6F",
+      "#7F4F24",
+      "#3D2B1F"
+    ],
+    "pro_prompt_system": "Design a responsive web layout for a bespoke artisanal coffee roaster. Emphasize a 3:4 portrait grid for hero imagery and a 16:9 landscape for product features. Use organic shapes and textures, integrating subtle parallax scrolls to highlight origin stories. Ensure mobile-first adaptability and a premium, handcrafted feel.",
+    "is_pro_vault": false
+  },
+  {
+    "id": "vault-202610142134-2",
+    "date": "2026-10-14",
+    "title": "AI Churn-Buster UI Flow",
+    "category": "AI Prompt Workflow",
+    "trend_signal": "AI-driven analytics reveal critical user drop-off points, necessitating adaptive UI elements to retain engagement. This workflow generates dynamic design interventions at churn risk points, converting potential exits into engagement opportunities through personalized nudges and content.",
+    "typography_pairing": "Space Grotesk + IBM Plex Mono",
+    "color_palette": [
+      "#2C3E50",
+      "#3498DB",
+      "#F39C12",
+      "#ECF0F1"
+    ],
+    "pro_prompt_system": "Generate a dynamic onboarding flow for a SaaS platform, integrating AI-predicted churn signals. If a user hesitates on 'Feature Setup', present a micro-tutorial video and a personalized progress bar. After 3 minutes of inactivity on 'First Project', suggest three pre-made templates relevant to their industry profile. Keep tone encouraging, not pushy.",
+    "is_pro_vault": true
+  },
+  {
+    "id": "vault-202610142134-3",
+    "date": "2026-10-14",
+    "title": "Hyper-Detailed Pixel Art Generator",
+    "category": "AI Prompt Workflow",
+    "trend_signal": "The demand for highly detailed, unique pixel art is surging, driven by indie games and nostalgic branding. Leveraging AI to generate intricate architectural references dramatically accelerates the creation of complex, high-fidelity pixel assets, ensuring consistency and rich detail.",
+    "typography_pairing": "Press Start 2P + Pixeloid Sans",
+    "color_palette": [
+      "#1A1A2E",
+      "#E94560",
+      "#0F3460",
+      "#533483"
+    ],
+    "pro_prompt_system": "Craft a highly detailed, isometric pixel art scene depicting a cyberpunk ramen shop interior. Include neon signage, steam from noodle bowls, intricate tile patterns on the floor, and subtle holographic projections. Reference traditional Japanese izakaya architecture with futuristic tech elements. Focus on a 32x32 pixel grid per major object, rendered in a 16-color palette.",
+    "is_pro_vault": true
+  },
+  {
     "id": "vault-202610142043-1",
     "date": "2026-10-14",
     "title": "Adaptive Micro-Interaction Retention Grid",

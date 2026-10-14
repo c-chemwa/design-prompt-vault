@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>SYS//VAULT — Daily Design, Motion &amp; AI Prompt Systems</title>
+    <link>https://c-chemwa.github.io/design-prompt-vault/</link>
+    <description>Autonomous daily radar of UI layouts, 60fps motion specs, typography pairings, and AI prompt systems.</description>
+    <lastBuildDate>Wed, 14 Oct 2026 21:34:14 +0000</lastBuildDate>
+    <item>
+      <title>[UI &amp; Layout] Niche Story-Grid System</title>
+      <link>https://c-chemwa.github.io/design-prompt-vault/?id=vault-202610142134-1</link>
+      <guid isPermaLink="false">vault-202610142134-1</guid>
+      <description>Niche brands demand unique digital presence beyond standard templates, struggling with generic layouts. This system leverages custom aspect ratios and fluid grids to craft distinct, narrative-driven layouts that captivate specific audiences and reinforce brand story. | Fonts: DM Serif Display + Inter | Palette: #E8DBC5 #B38C6F #7F4F24 #3D2B1F | Prompt: Design a responsive web layout for a bespoke artisanal coffee roaster. Emphasize a 3:4 portrait grid for hero imagery and a 16:9 landscape for product features. Use organic shapes and textures, integrating subtle parallax scrolls to highlight origin stories. Ensure mobile-first adaptability and a premium, handcrafted feel.</description>
+    </item>
+    <item>
+      <title>[AI Prompt Workflow] AI Churn-Buster UI Flow</title>
+      <link>https://c-chemwa.github.io/design-prompt-vault/?id=vault-202610142134-2</link>
+      <guid isPermaLink="false">vault-202610142134-2</guid>
+      <description>AI-driven analytics reveal critical user drop-off points, necessitating adaptive UI elements to retain engagement. This workflow generates dynamic design interventions at churn risk points, converting potential exits into engagement opportunities through personalized nudges and content. | Palette: #2C3E50 #3498DB #F39C12 #ECF0F1 | Unlock full Typography &amp; Production Prompt Spec in SYS//VAULT ($19).</description>
+    </item>
+    <item>
+      <title>[AI Prompt Workflow] Hyper-Detailed Pixel Art Generator</title>
+      <link>https://c-chemwa.github.io/design-prompt-vault/?id=vault-202610142134-3</link>
+      <guid isPermaLink="false">vault-202610142134-3</guid>
+      <description>The demand for highly detailed, unique pixel art is surging, driven by indie games and nostalgic branding. Leveraging AI to generate intricate architectural references dramatically accelerates the creation of complex, high-fidelity pixel assets, ensuring consistency and rich detail. | Palette: #1A1A2E #E94560 #0F3460 #533483 | Unlock full Typography &amp; Production Prompt Spec in SYS//VAULT ($19).</description>
+    </item>
+    <item>
+      <title>[UI &amp; Layout] Adaptive Micro-Interaction Retention Grid</title>
+      <link>https://c-chemwa.github.io/design-prompt-vault/?id=vault-202610142043-1</link>
+      <guid isPermaLink="false">vault-202610142043-1</guid>
+      <description>With AI-driven content leading to shorter user attention spans, designs that fluidly adapt to user context and offer engaging micro-interactions on demand are crucial for retention. The VLC redesign's success highlights the power of modern, responsive interfaces in capturing broad audience interest. | Fonts: Inter Bold + Source Sans Pro Regular | Palette: #1A1A2E #E6E6FA #4CAF50 #FFD700 | Prompt: Design a responsive UI grid system for a data-rich operational intelligence dashboard. Emphasize dynamic aspect ratio modules that animate subtly on data updates. Integrate micro-interaction hooks for churn prevention. Use a clean, accessible aesthetic with a focus on information hierarchy and real-time data visualization. Ensure mobile-first adaptability and easy content swapping for A/B testing.</description>
+    </item>
+    <item>
+      <title>[AI Prompt Workflow] Sociotechnical AI Viz Engine</title>
+      <link>https://c-chemwa.github.io/design-prompt-vault/?id=vault-202610142043-2</link>
+      <guid isPermaLink="false">vault-202610142043-2</guid>
+      <description>Operational intelligence now demands sociotechnical solutions, bridging human collaboration with real-time data. AI-generated visual patterns and structured game design docs prove that AI can streamline complex asset creation and documentation, making it indispensable for dynamic, data-driven systems. | Palette: #0D1117 #238636 #C9D1D9 #F2CC8F | Unlock full Typography &amp; Production Prompt Spec in SYS//VAULT ($19).</description>
+    </item>
+    <item>
+      <title>[UI &amp; Layout] Iterative UX Churn Reduction System</title>
+      <link>https://c-chemwa.github.io/design-prompt-vault/?id=vault-202610142043-3</link>
+      <guid isPermaLink="false">vault-202610142043-3</guid>
+      <description>The challenge of 'design for churn' in the AI era requires a highly iterative and documented approach, mirroring robust game design methodologies. Successful redesigns like VLC's demonstrate that structured evolution of user experience, guided by clear metrics, is key to sustained user engagement and loyalty. | Palette: #2C3E50 #ECF0F1 #9B59B6 #F39C12 | Unlock full Typography &amp; Production Prompt Spec in SYS//VAULT ($19).</description>
+    </item>
+    <item>
+      <title>[UI &amp; Layout] Neo-Brutalist High-Contrast Hero System</title>
+      <link>https://c-chemwa.github.io/design-prompt-vault/?id=seed-001</link>
+      <guid isPermaLink="false">seed-001</guid>
+      <description>High-contrast bento grids with 2px solid black borders and hard offset shadows are out-converting soft SaaS gradients by 34% on developer and creator landing pages. | Fonts: Clash Display (Bold 700) + JetBrains Mono (Regular 400) | Palette: #0D0D0D #F4F0EA #FF3366 #CCFF00 | Prompt: Design a neo-brutalist web hero section, asymmetrical 12-column bento grid, stark #F4F0EA background, #0D0D0D 2px exposed structural borders, acid lime #CCFF00 accent badges, oversized kinetic typography in Clash Display, tactile button states with 4px hard shadow offset.</description>
+    </item>
+    <item>
+      <title>[Motion &amp; 3D] Kinetic Chrome &amp; Y2K Motion Spec</title>
+      <link>https://c-chemwa.github.io/design-prompt-vault/?id=seed-002</link>
+      <guid isPermaLink="false">seed-002</guid>
+      <description>Short-form product teasers combining 60fps snap-zoom typography with metallic liquid shaders hold 2.4x higher 3-second retention on Reels and Shorts. | Palette: #050505 #E2E8F0 #3B82F6 #FF0055 | Unlock full Typography &amp; Production Prompt Spec in SYS//VAULT ($19).</description>
+    </item>
+  </channel>
+</rss>
