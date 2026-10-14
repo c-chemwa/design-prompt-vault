@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYS//VAULT — Daily Design, Motion & AI Prompt Systems</title>
+  <meta name="description" content="Auto-updated daily radar of high-converting UI layouts, kinetic motion specs, typography pairings, and copy-paste AI prompt architectures." />
+  
+  <!-- Fonts: Clash Display, Plus Jakarta Sans & JetBrains Mono -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --bg: #0D0D0D;
+      --card: #161616;
+      --ink: #F4F0EA;
+      --lime: #CCFF00;
+      --pink: #FF3366;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-display { font-family: 'Clash Display', sans-serif; }
+    .font-mono-code { font-family: 'JetBrains Mono', monospace; }
+    .brutal-border {
+      border: 2px solid #2A2A2A;
+      box-shadow: 5px 5px 0px #000000;
+      transition: all 0.15s ease;
+    }
+    .brutal-border:hover {
+      border-color: var(--lime);
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0px #000000;
+    }
+    .brutal-btn {
+      border: 2px solid #000;
+      box-shadow: 4px 4px 0px #000;
+      transition: all 0.12s ease;
+    }
+    .brutal-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px #000;
+    }
+    .brutal-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px #000;
+    }
+    .locked-blur {
+      filter: blur(6px);
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-24">
+
+  <!-- CONFIGURATION: Replace these 2 links in Step 4 -->
+  <script>
+    const CONFIG = {
+      UNLOCK_CHECKOUT_URL: "#checkout-link-coming-in-step-4",
+      SPONSOR_CHECKOUT_URL: "#sponsor-link-coming-in-step-4",
+      SECRET_PASSKEY: "VAULT373"
+    };
+  </script>
+
+  <!-- Top Live Status Bar -->
+  <div class="bg-[#CCFF00] text-black border-b-2 border-black py-2 px-4 text-xs font-mono-code font-semibold flex flex-wrap justify-between items-center gap-2">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2.5 h-2.5 bg-black rounded-full animate-ping"></span>
+      <span>AUTONOMOUS CRON ACTIVE // UPDATED DAILY AT 02:00 UTC</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <span id="vault-status-badge" class="bg-black text-[#CCFF00] px-2 py-0.5">STATUS: FREE PREVIEW MODE</span>
+      <button onclick="promptPasskey()" id="enter-key-btn" class="underline font-bold hover:text-[#FF3366]">Already have a Passkey?</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="max-w-6xl mx-auto px-4 pt-12 pb-8 border-b border-neutral-800">
+    <div class="inline-block bg-[#1F1F1F] border border-neutral-700 text-[#CCFF00] font-mono-code text-xs px-3 py-1 mb-4">
+      LIVE SIGNAL-TO-ASSET ENGINE v2.6
+    </div>
+    <h1 class="font-display text-4xl md:text-6xl font-bold tracking-tight uppercase leading-none mb-4">
+      Viral Design, Motion & <br />
+      <span class="text-[#CCFF00]">AI Prompt Architecture</span> Vault.
+    </h1>
+    <p class="text-neutral-400 max-w-2xl text-base md:text-lg mb-8">
+      Every night at 2:00 AM, our autonomous pipeline scrapes breakout UI patterns, 60fps motion specs, typography pairings, and production AI prompts—packaged ready to copy-paste.
+    </p>
+
+    <!-- Primary Monetization Banner -->
+    <div id="upgrade-banner" class="bg-[#161616] border-2 border-[#CCFF00] p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <div class="text-xs font-mono-code text-[#CCFF00] uppercase mb-1">FULL LIFETIME ACCESS + DOWNLOADABLE STARTER KIT</div>
+        <h2 class="font-display text-2xl font-bold text-white">Unlock All Daily Pro Specs + The Master Brand & Prompt Pack</h2>
+        <p class="text-sm text-neutral-400 mt-1">Instant passkey to unblur every live & archived system + 50-page downloadable Notion/PDF Design & Prompt Bible.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+        <a id="main-checkout-btn" href="#" target="_blank" class="brutal-btn bg-[#CCFF00] text-black font-display font-bold px-6 py-3.5 text-center uppercase tracking-wider text-sm">
+          Unlock Full Vault — $19
+        </a>
+        <a id="sponsor-btn" href="#" target="_blank" class="brutal-btn bg-[#222222] text-white border-neutral-600 font-mono-code px-4 py-3.5 text-center text-xs hover:bg-neutral-800">
+          Pin Your Tool/Studio ($39)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter & Search Controls -->
+  <section class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4">
+    <div class="flex flex-wrap gap-2" id="category-filters">
+      <button onclick="setCategory('ALL')" data-cat="ALL" class="cat-btn bg-[#CCFF00] text-black font-mono-code text-xs font-bold px-3.5 py-2 border border-black">ALL SYSTEMS (<span id="count-all">0</span>)</button>
+      <button onclick="setCategory('UI & Layout')" data-cat="UI & Layout" class="cat-btn bg-[#161616] text-neutral-300 font-mono-code text-xs px-3.5 py-2 border border-neutral-800 hover:border-neutral-600">UI & LAYOUT</button>
+      <button onclick="setCategory('Motion & 3D')" data-cat="Motion & 3D" class="cat-btn bg-[#161616] text-neutral-300 font-mono-code text-xs px-3.5 py-2 border border-neutral-800 hover:border-neutral-600">MOTION & 3D</button>
+      <button onclick="setCategory('Typography & Brand')" data-cat="Typography & Brand" class="cat-btn bg-[#161616] text-neutral-300 font
