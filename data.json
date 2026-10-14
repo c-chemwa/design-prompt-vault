@@ -1,5 +1,53 @@
 [
   {
+    "id": "vault-202610142139-1",
+    "date": "2026-10-14",
+    "title": "Niche-Adaptive Grid UI System",
+    "category": "UI & Layout",
+    "trend_signal": "The market demands unique brand identities without sacrificing usability. This system leverages AI to intelligently adapt standard grid conventions into bespoke, niche-specific layouts, directly combating churn by creating a more memorable and engaging user experience tailored to specific content.",
+    "typography_pairing": "Inter SemiBold + DM Sans Regular",
+    "color_palette": [
+      "#1F2937",
+      "#6B7280",
+      "#D1D5DB",
+      "#F9FAFB"
+    ],
+    "pro_prompt_system": "Design a flexible UI grid system for a boutique e-commerce platform specializing in artisanal goods. Prioritize unique product showcases while maintaining intuitive navigation. The system must adapt gracefully from desktop to mobile, incorporating asymmetrical elements for visual interest without hindering readability. Ensure the layout subtly encourages exploration and extended session times.",
+    "is_pro_vault": false
+  },
+  {
+    "id": "vault-202610142139-2",
+    "date": "2026-10-14",
+    "title": "Sociotechnical Dashboard AI Workflow",
+    "category": "AI Prompt Workflow",
+    "trend_signal": "Operational intelligence now demands a blend of human insight and automated data processing. This workflow structures complex sociotechnical data inputs for AI to generate intuitive, actionable dashboards, bridging the gap between raw data and human decision-making for enhanced efficiency.",
+    "typography_pairing": "Montserrat Bold + JetBrains Mono Regular",
+    "color_palette": [
+      "#0A2E36",
+      "#2D7F8A",
+      "#8ECBA9",
+      "#E4F2E7"
+    ],
+    "pro_prompt_system": "Generate an interactive operational intelligence dashboard for a private equity firm monitoring Clonal's deployment across diverse portfolios. Integrate real-time financial metrics, human resource allocation, and sentiment analysis from internal communication channels. Design the layout for quick executive oversight, highlighting key performance indicators and potential bottlenecks using dynamic data visualizations. Prioritize clarity, actionability, and a clear distinction between automated insights and human-input data points.",
+    "is_pro_vault": true
+  },
+  {
+    "id": "vault-202610142139-3",
+    "date": "2026-10-14",
+    "title": "Generative Micro-Pattern Engine",
+    "category": "Motion & 3D",
+    "trend_signal": "Static brand elements struggle to maintain engagement in the AI era. This system generates intricate, dynamically evolving micro-patterns, offering a constant sense of novelty that keeps users visually stimulated and reinforces brand identity, effectively reducing visual fatigue and combating churn.",
+    "typography_pairing": "PP Mori SemiBold + Beatrice Display Regular",
+    "color_palette": [
+      "#FF6B6B",
+      "#FFD166",
+      "#06D6A0",
+      "#118AB2"
+    ],
+    "pro_prompt_system": "Create a 15-second loopable motion graphic sequence showcasing an evolving 'Izakaya-inspired' pixel art pattern. The pattern should dynamically generate and morph, transitioning through various architectural and culinary motifs found in traditional Japanese izakayas. Focus on subtle, organic movements and intricate detail, utilizing a limited color palette for a sophisticated yet playful aesthetic. Optimize for seamless looping as a background element or brand ident, emphasizing depth and visual texture.",
+    "is_pro_vault": true
+  },
+  {
     "id": "vault-202610142134-1",
     "date": "2026-10-14",
     "title": "Niche Story-Grid System",
