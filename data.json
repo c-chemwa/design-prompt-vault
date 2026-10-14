@@ -1,0 +1,24 @@
+[
+  {
+    "id": "seed-001",
+    "date": "2026-10-14",
+    "title": "Neo-Brutalist High-Contrast Hero System",
+    "category": "UI & Layout",
+    "trend_signal": "High-contrast bento grids with 2px solid black borders and hard offset shadows are out-converting soft SaaS gradients by 34% on developer and creator landing pages.",
+    "typography_pairing": "Clash Display (Bold 700) + JetBrains Mono (Regular 400)",
+    "color_palette": ["#0D0D0D", "#F4F0EA", "#FF3366", "#CCFF00"],
+    "pro_prompt_system": "Design a neo-brutalist web hero section, asymmetrical 12-column bento grid, stark #F4F0EA background, #0D0D0D 2px exposed structural borders, acid lime #CCFF00 accent badges, oversized kinetic typography in Clash Display, tactile button states with 4px hard shadow offset.",
+    "is_pro_vault": false
+  },
+  {
+    "id": "seed-002",
+    "date": "2026-10-14",
+    "title": "Kinetic Chrome & Y2K Motion Spec",
+    "category": "Motion & 3D",
+    "trend_signal": "Short-form product teasers combining 60fps snap-zoom typography with metallic liquid shaders hold 2.4x higher 3-second retention on Reels and Shorts.",
+    "typography_pairing": "Dela Gothic One + Inter Tight",
+    "color_palette": ["#050505", "#E2E8F0", "#3B82F6", "#FF0055"],
+    "pro_prompt_system": "3D liquid chrome typography reveal, high-contrast studio rim lighting, anamorphic lens flare, dark obsidian background #050505, snappy exponential easing curves (cubic-bezier 0.87, 0, 0.13, 1), Y2K cyber-industrial aesthetic, 4K octane render look.",
+    "is_pro_vault": true
+  }
+]
