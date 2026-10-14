@@ -1,0 +1,35 @@
+name: Daily Vault Auto-Updater
+
+on:
+  schedule:
+    # Runs automatically every night at 02:00 UTC (05:00 AM EAT)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Lets you trigger a test run with 1 click
+
+permissions:
+  contents: write
+
+jobs:
+  update-vault:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run AI Vault Synthesizer
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python update_vault.py
+
+      - name: Commit and Push New Vault Systems
+        run: |
+          git config --global user.name "Vault Auto-Bot"
+          git config --global user.email "bot@users.noreply.github.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "Auto-update: Added daily design & prompt systems"
+          git push
