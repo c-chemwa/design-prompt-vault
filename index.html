@@ -116,4 +116,188 @@
       <button onclick="setCategory('ALL')" data-cat="ALL" class="cat-btn bg-[#CCFF00] text-black font-mono-code text-xs font-bold px-3.5 py-2 border border-black">ALL SYSTEMS (<span id="count-all">0</span>)</button>
       <button onclick="setCategory('UI & Layout')" data-cat="UI & Layout" class="cat-btn bg-[#161616] text-neutral-300 font-mono-code text-xs px-3.5 py-2 border border-neutral-800 hover:border-neutral-600">UI & LAYOUT</button>
       <button onclick="setCategory('Motion & 3D')" data-cat="Motion & 3D" class="cat-btn bg-[#161616] text-neutral-300 font-mono-code text-xs px-3.5 py-2 border border-neutral-800 hover:border-neutral-600">MOTION & 3D</button>
-      <button onclick="setCategory('Typography & Brand')" data-cat="Typography & Brand" class="cat-btn bg-[#161616] text-neutral-300 font
+      <button onclick="setCategory('Typography & Brand')" data-cat="Typography & Brand" class="cat-btn bg-[#161616] text-neutral-300 font-mono-code text-xs px-3.5 py-2 border border-neutral-800 hover:border-neutral-600">TYPOGRAPHY & BRAND</button>
+      <button onclick="setCategory('AI Prompt Workflow')" data-cat="AI Prompt Workflow" class="cat-btn bg-[#161616] text-neutral-300 font-mono-code text-xs px-3.5 py-2 border border-neutral-800 hover:border-neutral-600">AI WORKFLOWS</button>
+    </div>
+
+    <div class="relative w-full md:w-72">
+      <input
+        type="text"
+        id="search-input"
+        oninput="renderCards()"
+        placeholder="Search fonts, hex, kinetic, bento..."
+        class="w-full bg-[#161616] border-2 border-neutral-800 focus:border-[#CCFF00] outline-none px-4 py-2 text-sm font-mono-code text-white"
+      />
+    </div>
+  </section>
+
+  <!-- Vault Grid -->
+  <main class="max-w-6xl mx-auto px-4">
+    <div id="vault-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Populated dynamically from data.json -->
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-[#CCFF00] text-black font-mono-code text-xs font-bold px-4 py-3 border-2 border-black hidden z-50">
+    COPIED TO CLIPBOARD
+  </div>
+
+  <script>
+    let allItems = [];
+    let activeCategory = 'ALL';
+    let isVipUnlocked = false;
+
+    function checkVipStatus() {
+      const params = new URLSearchParams(window.location.search);
+      const urlKey = params.get('vip');
+      if (urlKey && urlKey.toUpperCase() === CONFIG.SECRET_PASSKEY) {
+        localStorage.setItem('vault_vip_unlocked', 'true');
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+      isVipUnlocked = localStorage.getItem('vault_vip_unlocked') === 'true';
+
+      if (isVipUnlocked) {
+        document.getElementById('vault-status-badge').textContent = 'STATUS: PRO VAULT UNLOCKED ⚡';
+        document.getElementById('vault-status-badge').className = 'bg-[#FF3366] text-white px-2 py-0.5 font-bold';
+        document.getElementById('enter-key-btn').classList.add('hidden');
+        document.getElementById('upgrade-banner').classList.add('hidden');
+      }
+
+      document.getElementById('main-checkout-btn').href = CONFIG.UNLOCK_CHECKOUT_URL;
+      document.getElementById('sponsor-btn').href = CONFIG.SPONSOR_CHECKOUT_URL;
+    }
+
+    function promptPasskey() {
+      const code = prompt('Enter your Pro Vault Passkey (sent in your receipt):');
+      if (code && code.trim().toUpperCase() === CONFIG.SECRET_PASSKEY) {
+        localStorage.setItem('vault_vip_unlocked', 'true');
+        checkVipStatus();
+        renderCards();
+        showToast('PRO VAULT UNLOCKED!');
+      } else if (code) {
+        alert('Invalid passkey. Grab instant access for $19 to unlock all systems.');
+      }
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.remove('hidden');
+      setTimeout(() => t.classList.add('hidden'), 2000);
+    }
+
+    function copyText(text, label) {
+      navigator.clipboard.writeText(text);
+      showToast(`COPIED ${label}`);
+    }
+
+    function setCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.className = 'cat-btn bg-[#CCFF00] text-black font-mono-code text-xs font-bold px-3.5 py-2 border border-black';
+        } else {
+          btn.className = 'cat-btn bg-[#161616] text-neutral-300 font-mono-code text-xs px-3.5 py-2 border border-neutral-800 hover:border-neutral-600';
+        }
+      });
+      renderCards();
+    }
+
+    function renderCards() {
+      const grid = document.getElementById('vault-grid');
+      const query = document.getElementById('search-input').value.toLowerCase();
+
+      const filtered = allItems.filter(item => {
+        const matchesCat = activeCategory === 'ALL' || item.category === activeCategory;
+        const matchesSearch =
+          item.title.toLowerCase().includes(query) ||
+          item.trend_signal.toLowerCase().includes(query) ||
+          item.typography_pairing.toLowerCase().includes(query) ||
+          item.category.toLowerCase().includes(query);
+        return matchesCat && matchesSearch;
+      });
+
+      grid.innerHTML = filtered.map(item => {
+        const locked = item.is_pro_vault && !isVipUnlocked;
+        const swatches = (item.color_palette || []).map(hex => `
+          <button onclick="copyText('${hex}', '${hex}')" class="flex items-center gap-1.5 bg-[#0D0D0D] border border-neutral-800 px-2 py-1 text-xs font-mono-code hover:border-white" title="Click to copy HEX">
+            <span class="w-3.5 h-3.5 inline-block border border-white/20" style="background:${hex}"></span>
+            <span>${hex}</span>
+          </button>
+        `).join('');
+
+        return `
+          <article class="brutal-border bg-[#161616] p-6 flex flex-col justify-between relative">
+            <div>
+              <div class="flex justify-between items-center gap-2 mb-3">
+                <span class="font-mono-code text-xs px-2.5 py-0.5 bg-neutral-900 border border-neutral-700 text-[#CCFF00]">
+                  ${item.category}
+                </span>
+                <div class="flex items-center gap-2">
+                  <span class="font-mono-code text-xs text-neutral-500">${item.date}</span>${item.is_pro_vault
+                    ? `<span class="font-mono-code text-[11px] font-bold px-2 py-0.5 ${isVipUnlocked ? 'bg-[#CCFF00] text-black' : 'bg-[#FF3366] text-white'}">${isVipUnlocked ? 'PRO UNLOCKED' : 'PRO VAULT'}</span>`
+                    : `<span class="font-mono-code text-[11px] font-bold px-2 py-0.5 bg-emerald-400 text-black">FREE DAILY SPEC</span>`
+                  }
+                </div>
+              </div>
+
+              <h3 class="font-display text-2xl font-bold text-white mb-2">${item.title}</h3>
+              <p class="text-sm text-neutral-300 leading-relaxed mb-4">${item.trend_signal}</p>
+
+              <!-- Palette Swatches -->
+              <div class="mb-4">
+                <div class="text-[11px] font-mono-code text-neutral-500 uppercase mb-1.5">System Color Tokens (Click to Copy)</div>
+                <div class="flex flex-wrap gap-2">${swatches}</div>
+              </div>
+            </div>
+
+            <!-- Typography & Prompt Spec (Locked if Pro & Not VIP) -->
+            <div class="relative mt-2 pt-4 border-t border-neutral-800">
+              <div class="${locked ? 'locked-blur' : ''}">
+                <div class="mb-3">
+                  <span class="text-[11px] font-mono-code text-neutral-500 uppercase block">Typography Pairing</span>
+                  <span class="font-mono-code text-xs text-[#CCFF00] font-semibold">${item.typography_pairing}</span>
+                </div>
+                <div class="bg-[#0D0D0D] border border-neutral-800 p-3 mb-3">
+                  <div class="text-[10px] font-mono-code text-neutral-500 uppercase mb-1">Production Prompt / Motion Spec</div>
+                  <p class="font-mono-code text-xs text-neutral-200 leading-relaxed">${item.pro_prompt_system}</p>
+                </div>
+                <button
+                  onclick="copyText(\`${item.pro_prompt_system.replace(/`/g, '')}\`, 'PROMPT SPEC')"
+                  class="w-full bg-neutral-800 hover:bg-[#CCFF00] hover:text-black text-white font-mono-code text-xs font-bold py-2.5 transition"
+                >
+                  [ COPY PRODUCTION SPEC ]
+                </button>
+              </div>
+
+              ${locked ? `
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-[2px] p-4 text-center">
+                  <p class="font-mono-code text-xs text-white font-bold mb-2">🔒 PRO TYPOGRAPHY & PROMPT SPEC</p>
+                  <a href="${CONFIG.UNLOCK_CHECKOUT_URL}" target="_blank" class="brutal-btn bg-[#CCFF00] text-black font-display font-bold text-xs px-5 py-2.5 uppercase">
+                    Unlock Full Vault ($19)
+                  </a>
+                </div>
+              ` : ''}
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    async function loadVault() {
+      checkVipStatus();
+      try {
+        const res = await fetch('./data.json?t=' + Date.now());
+        allItems = await res.json();
+        document.getElementById('count-all').textContent = allItems.length;
+        renderCards();
+      } catch (e) {
+        console.error('Failed to load data.json:', e);
+      }
+    }
+
+    loadVault();
+  </script>
+</body>
+</html>
