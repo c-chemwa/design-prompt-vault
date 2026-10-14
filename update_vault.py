@@ -2,7 +2,7 @@ import os
 import json
 import urllib.request
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from xml.sax.saxutils import escape
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -89,33 +89,54 @@ Make the first item have "is_pro_vault": false (Free Daily Hook), and the second
         raw_text = result["candidates"][0]["content"]["parts"][0]["text"]
         return json.loads(raw_text)
 
+def format_item_pubdate(item, index):
+    """Generates a valid, unique RFC-822 pubDate for every item so dlvr.it validates cleanly."""
+    item_id = item.get("id", "")
+    try:
+        if item_id.startswith("vault-") and len(item_id.split("-")[1]) == 12:
+            dt = datetime.strptime(item_id.split("-")[1], "%Y%m%d%H%M").replace(tzinfo=timezone.utc)
+        else:
+            dt = datetime.strptime(item.get("date", "2026-10-14"), "%Y-%m-%d").replace(hour=12, tzinfo=timezone.utc)
+    except Exception:
+        dt = datetime.now(timezone.utc)
+
+    # Stagger items by 1 minute so every item has a distinct timestamp
+    dt = dt - timedelta(minutes=index)
+    return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
+
 def build_rss_and_sitemap(items):
-    """Auto-generates feed.xml (for automated social posting) and sitemap.xml (for Google SEO)."""
+    """Auto-generates W3C-valid feed.xml (for dlvr.it / Make) and sitemap.xml (for Google SEO)."""
     now_rfc = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
     today_iso = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     rss_items = []
-    for item in items[:20]:
+    for idx, item in enumerate(items[:20]):
         title = escape(f"[{item['category']}] {item['title']}")
         palette_str = " ".join(item.get("color_palette", []))
         if item.get("is_pro_vault"):
             desc = escape(f"{item['trend_signal']} | Palette: {palette_str} | Unlock full Typography & Production Prompt Spec in SYS//VAULT ($19).")
         else:
             desc = escape(f"{item['trend_signal']} | Fonts: {item['typography_pairing']} | Palette: {palette_str} | Prompt: {item['pro_prompt_system']}")
+        
         link = f"{SITE_URL}/?id={escape(item['id'])}"
+        pub_date = format_item_pubdate(item, idx)
+
         rss_items.append(f"""    <item>
       <title>{title}</title>
       <link>{link}</link>
       <guid isPermaLink="false">{escape(item['id'])}</guid>
+      <pubDate>{pub_date}</pubDate>
       <description>{desc}</description>
     </item>""")
 
-    rss_xml = f"""<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+    rss_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SYS//VAULT — Daily Design, Motion &amp; AI Prompt Systems</title>
+    <title>SYS//VAULT - Daily Design, Motion &amp; AI Prompt Systems</title>
     <link>{SITE_URL}/</link>
+    <atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
     <description>Autonomous daily radar of UI layouts, 60fps motion specs, typography pairings, and AI prompt systems.</description>
+    <language>en-us</language>
     <lastBuildDate>{now_rfc}</lastBuildDate>
 {chr(10).join(rss_items)}
   </channel>
