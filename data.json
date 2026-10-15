@@ -1,5 +1,53 @@
 [
   {
+    "id": "vault-202610150207-1",
+    "date": "2026-10-15",
+    "title": "AI Iteration Canvas System",
+    "category": "AI Prompt Workflow",
+    "trend_signal": "Rapid AI image generation often leads to a 'slot machine' problem, losing track of valuable iterations. This system ensures every visual concept, prompt adjustment, and historical version is mapped on a visual canvas, transforming chaotic ideation into an organized, trackable design process.",
+    "typography_pairing": "Inter Display + IBM Plex Mono",
+    "color_palette": [
+      "#2C3E50",
+      "#ECF0F1",
+      "#95A5A6",
+      "#3498DB"
+    ],
+    "pro_prompt_system": "Design a visual canvas layout for tracking AI image generation iterations. Include sections for initial prompt, key variations, discarded concepts with reasons, selected final, and a timeline of prompt refinements. Emphasize clarity, version numbers, and visual thumbnail integration for easy comparison and recall, aiding in complex design project management.",
+    "is_pro_vault": false
+  },
+  {
+    "id": "vault-202610150207-2",
+    "date": "2026-10-15",
+    "title": "Decay-Resilient UI Kit",
+    "category": "UI & Layout",
+    "trend_signal": "The AI era's rapid code generation and design churn demand interfaces built for decay and self-maintenance. This kit emphasizes modularity and semantic naming, ensuring components remain stable and adaptable even as underlying codebases evolve rapidly.",
+    "typography_pairing": "Figtree Display + Rubik",
+    "color_palette": [
+      "#1A1A2E",
+      "#E0E0E0",
+      "#6A6A80",
+      "#FFD700"
+    ],
+    "pro_prompt_system": "Develop a UI design system for 'decay-resilient' web applications. Focus on atomic design principles, ensuring each component is self-contained, easily swappable, and semantically tagged for AI-driven maintenance. Include examples of adaptive layouts that fluidly reconfigure based on content churn, maintaining aesthetic integrity and functional stability across diverse data inputs.",
+    "is_pro_vault": true
+  },
+  {
+    "id": "vault-202610150207-3",
+    "date": "2026-10-15",
+    "title": "Niche-First UX Blueprint",
+    "category": "UI & Layout",
+    "trend_signal": "Generic textbook layouts often fail to capture unique brand identities, especially for boutique clients. This blueprint prioritizes creative niche aesthetics while embedding robust, intuitive UX patterns, ensuring distinctiveness without sacrificing usability or operational intelligence.",
+    "typography_pairing": "DM Serif Display + Fira Sans",
+    "color_palette": [
+      "#5A2D2D",
+      "#F7F0E8",
+      "#B08A6F",
+      "#2A4E4E"
+    ],
+    "pro_prompt_system": "Craft a UX blueprint for a high-end bespoke bakery's online presence. Balance unique, artisanal visual storytelling with clear e-commerce pathways. Integrate subtle operational intelligence cues for customer journey analytics. Emphasize a blend of non-standard grid layouts and intuitive navigation, ensuring brand personality shines while maintaining a seamless user experience for ordering and engagement.",
+    "is_pro_vault": true
+  },
+  {
     "id": "vault-202610142139-1",
     "date": "2026-10-14",
     "title": "Niche-Adaptive Grid UI System",
