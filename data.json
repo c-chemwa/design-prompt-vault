@@ -1,5 +1,53 @@
 [
   {
+    "id": "vault-202610150650-1",
+    "date": "2026-10-15",
+    "title": "Adaptive Canvas Layout System",
+    "category": "UI & Layout",
+    "trend_signal": "In an era of diverse content and AI-generated elements, adaptive layouts are crucial for maintaining brand integrity across devices. This system prioritizes fluid aspect ratios and modular components, allowing creative niches to thrive without breaking responsiveness.",
+    "typography_pairing": "Outfit SemiBold + Inter Regular",
+    "color_palette": [
+      "#2C3E50",
+      "#ECF0F1",
+      "#3498DB",
+      "#E74C3C"
+    ],
+    "pro_prompt_system": "Develop a responsive web layout for a boutique digital agency. The design must feature a hero section with a 16:9 aspect ratio hero image, three fluid card components below it (adapting from 3-column to 1-column), and a sticky footer. Prioritize visual balance and intuitive navigation across all breakpoints, reflecting a modern yet approachable aesthetic for creative professionals.",
+    "is_pro_vault": false
+  },
+  {
+    "id": "vault-202610150650-2",
+    "date": "2026-10-15",
+    "title": "Modular Decay UI Architect",
+    "category": "AI Prompt Workflow",
+    "trend_signal": "As AI rapidly generates and updates code, UI components must be designed for elegant decay and easy replacement. This prompt system generates self-contained, versioned UI modules, ensuring system stability and reducing maintenance overhead in fast-evolving AI development cycles.",
+    "typography_pairing": "DM Serif Text Bold + IBM Plex Mono Regular",
+    "color_palette": [
+      "#0A0A0A",
+      "#FFFFFF",
+      "#6D28D9",
+      "#C4B5FD"
+    ],
+    "pro_prompt_system": "As an AI-driven UI architect, generate a self-contained React component for a data visualization dashboard. The component must include clear prop definitions, internal state management for dynamic data fetching, and a lifecycle method for graceful unmounting. Emphasize modularity, versioning metadata, and a clear deprecation path within its JSDoc comments, anticipating future AI-driven code evolution.",
+    "is_pro_vault": true
+  },
+  {
+    "id": "vault-202610150650-3",
+    "date": "2026-10-15",
+    "title": "API Flow Data Motion",
+    "category": "Motion & 3D",
+    "trend_signal": "Visualizing complex API interactions and data flows is critical for user understanding and engagement, especially as services become more composable. This motion system simplifies abstract processes into clear, dynamic animations, enhancing perception of system robustness and reducing cognitive load for end-users.",
+    "typography_pairing": "Neue Haas Grotesk Display Pro 65 Medium + Roboto Flex Regular",
+    "color_palette": [
+      "#1A1A2E",
+      "#E0BBE4",
+      "#957DAD",
+      "#FFC72C"
+    ],
+    "pro_prompt_system": "Create a 15-second animated explainer for a new API service that transforms raw data into a 'gold-standard' output. The animation should visually represent data ingress, a processing stage with abstract alchemical symbols, and a clean, refined data egress. Use smooth, generative transitions and a subtle 3D depth, focusing on clarity of transformation and the value proposition of the API's 'alchemy' process.",
+    "is_pro_vault": true
+  },
+  {
     "id": "vault-202610150207-1",
     "date": "2026-10-15",
     "title": "AI Iteration Canvas System",
