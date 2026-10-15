@@ -7,7 +7,7 @@ from xml.sax.saxutils import escape
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 DATA_FILE = "data.json"
-SITE_URL = "https://c-chemwa.github.io/design-prompt-vault"
+SITE_URL = "https://sys-vault.github.io/design-prompt-vault"
 
 def fetch_live_signals():
     """Pulls live design, frontend, and AI workflow signals from free public JSON APIs."""
