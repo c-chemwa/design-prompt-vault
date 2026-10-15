@@ -25,6 +25,20 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python update_vault.py
+      - name: Run AI Vault Synthesizer
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python update_vault.py
+          python generate_tiktok_slide.py
+
+      - name: Commit and Push New Assets & Slides
+        run: |
+          git config --global user.name "Vault Auto-Bot"
+          git config --global user.email "bot@users.noreply.github.com"
+          git add data.json feed.xml sitemap.xml tiktok_slides/
+          git diff --staged --quiet || git commit -m "Auto-update: Added daily vault systems and TikTok slide"
+          git push
 
       - name: Commit and Push New Vault Systems
         run: |
