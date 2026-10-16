@@ -1,5 +1,53 @@
 [
   {
+    "id": "vault-202610160638-1",
+    "date": "2026-10-16",
+    "title": "AI Product Shot Consistency Framework",
+    "category": "AI Prompt Workflow",
+    "trend_signal": "AI agents pass self-reviews but fail browser QA, and product photos look great once then never again. This pattern highlights the critical need for a structured, repeatable prompt workflow to ensure consistent visual quality and brand adherence across AI-generated product imagery, moving beyond one-off successes to reliable production assets.",
+    "typography_pairing": "Inter Bold + Fira Sans Light",
+    "color_palette": [
+      "#2C3E50",
+      "#E74C3C",
+      "#2ECC71",
+      "#ECF0F1"
+    ],
+    "pro_prompt_system": "Craft a studio-quality product shot of [Product Name] on a [Material] surface. Use a 45-degree elevated eye-level camera angle, soft natural light from the left, and a subtle depth of field. Ensure the product is perfectly centered, in focus, and rendered with photorealistic textures. Include [specific detail: e.g., 'subtle reflections' or 'packaging intact'].",
+    "is_pro_vault": false
+  },
+  {
+    "id": "vault-202610160638-2",
+    "date": "2026-10-16",
+    "title": "Validation Workflow Data UI",
+    "category": "UI & Layout",
+    "trend_signal": "Treating complex models (like Hoover Dam) as layered data products, not just renders, requires robust validation workflows. This pattern emphasizes the design of interactive user interfaces that allow for the inspection, manipulation, and validation of data layers, ensuring accuracy and trust in complex digital twins or data visualizations.",
+    "typography_pairing": "Roboto Mono Bold + Open Sans Regular",
+    "color_palette": [
+      "#1A2C3D",
+      "#4B77BE",
+      "#9AD9D7",
+      "#F0F0F0"
+    ],
+    "pro_prompt_system": "Design a modular data validation UI for a multi-layered engineering model. The interface should feature a primary 3D viewport, a dynamic layer control panel with toggle and opacity sliders, and a real-time data integrity feedback console. Emphasize clear hierarchy, interactive data points, and a clean, technical aesthetic for engineer review.",
+    "is_pro_vault": true
+  },
+  {
+    "id": "vault-202610160638-3",
+    "date": "2026-10-16",
+    "title": "AI-Localized Storefront Branding",
+    "category": "Typography & Brand",
+    "trend_signal": "AI agents building storefronts and natural language having design trade-offs (static vs. dynamic typing). This pattern highlights the need for a brand system that dynamically adapts its typography, copy, and layout for various linguistic structures and cultural contexts, optimizing conversion for AI-generated international storefronts beyond simple translation.",
+    "typography_pairing": "Noto Sans Display + IBM Plex Sans",
+    "color_palette": [
+      "#4A4A6A",
+      "#C9975D",
+      "#8BC34A",
+      "#F8F8F8"
+    ],
+    "pro_prompt_system": "Generate brand guidelines for an AI-powered localized storefront for [Product Category]. Focus on adaptable typography (multi-script support), dynamic copy generation based on target language's grammatical structure, and a flexible layout system that accommodates varying text lengths. Design for [Country/Region] first, emphasizing cultural relevance and local aesthetic preferences.",
+    "is_pro_vault": true
+  },
+  {
     "id": "vault-202610150650-1",
     "date": "2026-10-15",
     "title": "Adaptive Canvas Layout System",
