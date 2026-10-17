@@ -1,5 +1,53 @@
 [
   {
+    "id": "vault-202610170627-1",
+    "date": "2026-10-17",
+    "title": "Dynamic Light & Palette Prompt System",
+    "category": "AI Prompt Workflow",
+    "trend_signal": "The industry is craving granular control over AI-generated aesthetics, moving beyond generic prompts to specific visual parameters. This system leverages direct lighting cues and pre-defined palettes to achieve highly mood-driven, consistent visual output.",
+    "typography_pairing": "Outfit Black + Inter Regular",
+    "color_palette": [
+      "#0A0A0A",
+      "#FF5733",
+      "#FFC300",
+      "#DAF7A6"
+    ],
+    "pro_prompt_system": "Generate a hyper-realistic portrait of a subject with an expression of thoughtful contemplation. Employ dramatic chiaroscuro lighting from a single, warm overhead source. The scene is bathed in a palette of deep crimson and muted gold, with subtle emerald accents in the background. Emphasize textural detail on skin and fabric. 16k, cinematic, volumetric light.",
+    "is_pro_vault": false
+  },
+  {
+    "id": "vault-202610170627-2",
+    "date": "2026-10-17",
+    "title": "Adaptive Contextual UI Framework",
+    "category": "UI & Layout",
+    "trend_signal": "With AI assistants managing personal data and understanding natural language, UIs must become dynamically typed and contextually aware. This framework ensures interfaces fluidly adapt content and tools based on user intent and data relevance, mirroring linguistic flexibility.",
+    "typography_pairing": "Geist Sans Bold + JetBrains Mono Regular",
+    "color_palette": [
+      "#1A1A2E",
+      "#E0BBE4",
+      "#957DAD",
+      "#D2E0FB"
+    ],
+    "pro_prompt_system": "Design a modular dashboard UI for a personal data assistant, showcasing adaptive content blocks. Prioritize semantic grouping and dynamic resizing based on user priority and MCP tool availability. Include a 'context snapshot' feature. Use a minimalist dark mode with subtle gradient highlights. Focus on clear hierarchy and intuitive interaction flows for data privacy settings.",
+    "is_pro_vault": true
+  },
+  {
+    "id": "vault-202610170627-3",
+    "date": "2026-10-17",
+    "title": "Multi-Agent Kinetic Data Viz",
+    "category": "Motion & 3D",
+    "trend_signal": "Inspired by complex system designs like 'Ringfort', this pattern translates multi-entity interactions into compelling motion graphics. It visualizes data relationships and conflicts through dynamic, interconnected agents, providing clearer narrative in complex datasets via AI-driven animation.",
+    "typography_pairing": "Oxanium SemiBold + Fira Code Regular",
+    "color_palette": [
+      "#001F3F",
+      "#FF4136",
+      "#FFDC00",
+      "#2ECC40"
+    ],
+    "pro_prompt_system": "Create a 3D motion graphics sequence depicting a network of six data agents interacting within a spherical abstract environment. Each agent represents a 'fort' of information, dynamically exchanging and contesting data packets, visualized by glowing particle trails. Emphasize fluid, organic movement and distinct color coding per agent. Camera orbits slowly, revealing complex interdependencies. 4k, 60fps.",
+    "is_pro_vault": true
+  },
+  {
     "id": "vault-202610160638-1",
     "date": "2026-10-16",
     "title": "AI Product Shot Consistency Framework",
